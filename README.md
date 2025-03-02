@@ -23,11 +23,16 @@ async function getUser(): Promise<{ name: string }> {
 
 export async function ComponentSample() {
   return (
+    // use <Waiter> component when you want to render components after some promises are resolved.
     <Waiter
+      // pass promises with keys
       orders={{
         getUserResult: getUser(),
       }}
+      // sideshow component is shown until all orders are ready
       sideshow={<div>Loading...</div>}
+      // serve will called when all orders are ready
+      // resolved values are passed with order key
       serve={({
         getUserResult,
       }) => (
