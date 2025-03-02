@@ -1,1 +1,1 @@
-export { Waiter } from "./waiter";
+export { Waiter } from "./waiter/index";
