@@ -3,7 +3,9 @@
   "description": "react component to wait multiple promises",
   "version": "0.11.0",
   "scripts": {
-    "build": "tsc"
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.json",
+    "build": "npm run build:cjs && npm run build:esm"
   },
   "files": [
     "dist",
@@ -25,7 +27,9 @@
     "url": "https://github.com/a10adotapp/react-waiter/issues"
   },
   "homepage": "https://github.com/a10adotapp/react-waiter",
-  "main": "dist/index.jsx",
+  "main": "dist/cjs/index.jsx",
+  "module": "dist/esm/index.jsx",
+  "types": "dist/esm/index.d.tsx",
   "devDependencies": {
     "@types/react": "^19.0.10",
     "typescript": "^5.8.2"
