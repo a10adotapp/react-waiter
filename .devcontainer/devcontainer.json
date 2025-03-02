@@ -1,0 +1,9 @@
+{
+  "name": "react-waiter",
+  "dockerComposeFile": [
+    "compose.yaml"
+  ],
+  "service": "app",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/home/vscode/react-waiter"
+}

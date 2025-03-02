@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@a10adotapp/react-waiter",
+  "description": "react component to wait multiple promises",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc",
+    "publish": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a10adotapp/react-waiter.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "promise"
+  ],
+  "author": "a10adotapp <mail@a10a.app> (https://github.com/a10adotapp)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a10adotapp/react-waiter/issues"
+  },
+  "homepage": "https://github.com/a10adotapp/react-waiter",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "react": "^19.0.0"
+  }
+}

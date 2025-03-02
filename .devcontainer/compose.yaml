@@ -1,0 +1,10 @@
+services:
+  app:
+    image: github.com/a10adotapp/react-waiter
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
+    container_name: react-waiter-app
+    command: sleep infinity
+    volumes:
+      - ..:/home/vscode/react-waiter
