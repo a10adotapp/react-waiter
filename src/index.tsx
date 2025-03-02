@@ -1,9 +1,51 @@
 import { ReactElement, Suspense } from "react";
 
+/**
+ * props accepted by {@link Waiter}.
+ */
 type WaiterProps<T> = ChefProps<T> & {
+  /**
+   * fallback component shown until all orders get ready
+   */
   sideshow?: ReactElement | undefined;
 }
 
+/**
+ * wait until all orders are ready
+ * 
+ * @example
+ * 
+ * ```tsx
+ * import { Waiter } from "@a10adotapp/react-waiter";
+ * 
+ * async function getUser(): Promise<{ name: string }> {
+ *   "use server";
+ * 
+ *   return new Promise((resolve) => {
+ *     setTimeout(() => {
+ *       resolve({
+ *         name: "John Doe",
+ *       });
+ *     }, 500);
+ *   });
+ * }
+ * 
+ * export async function ComponentSample() {
+ *   return (
+ *     <Waiter
+ *       orders={{
+ *         getUserResult: getUser(),
+ *       }}
+ *       sideshow={<div>Loading...</div>}
+ *       serve={({
+ *         getUserResult,
+ *       }) => (
+ *         <p>{getUserResult.value?.name || getUserResult.error?.message || "-"}</p>
+ *       )} />
+ *   );
+ * }
+ * ```
+ */
 export function Waiter<T>({
   orders,
   serve,
@@ -16,16 +58,29 @@ export function Waiter<T>({
   );
 }
 
+/**
+ * error thrown when failed to resolve order
+ */
 interface OrderResolveError extends Error {
   reason: PromiseRejectedResult["reason"];
 }
 
+/**
+ * props accepted by {@link Chef}.
+ */
 type ChefProps<T extends {
   [K in keyof T]: T[K];
 }> = {
+  /**
+   * orders to be resolved
+   */
   orders: {
     [K in keyof T]: Promise<T[K]>;
   };
+
+  /**
+   * run when all orders are ready
+   */
   serve: (arg0: {
     [K in keyof T]: {
       value?: T[K] | undefined;
@@ -34,6 +89,9 @@ type ChefProps<T extends {
   }) => ReactElement;
 };
 
+/**
+ * accept orders and serve dishes
+ */
 async function Chef<T>({
   orders,
   serve,
