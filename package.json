@@ -1,11 +1,16 @@
 {
   "name": "@a10adotapp/react-waiter",
   "description": "react component to wait multiple promises",
-  "version": "0.2.0",
+  "version": "0.6.0",
   "scripts": {
     "build": "tsc",
     "publish": "npm publish --access=public"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a10adotapp/react-waiter.git"
@@ -21,7 +26,7 @@
     "url": "https://github.com/a10adotapp/react-waiter/issues"
   },
   "homepage": "https://github.com/a10adotapp/react-waiter",
-  "main": "index.js",
+  "main": "dist/index.jsx",
   "devDependencies": {
     "@types/react": "^19.0.10",
     "typescript": "^5.8.2"

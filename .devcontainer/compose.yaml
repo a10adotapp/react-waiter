@@ -7,4 +7,5 @@ services:
     container_name: react-waiter-app
     command: sleep infinity
     volumes:
+      - .npm:/home/vscode/.npm
       - ..:/home/vscode/react-waiter
