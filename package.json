@@ -1,7 +1,7 @@
 {
   "name": "@a10adotapp/react-waiter",
   "description": "react component to wait multiple promises",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "scripts": {
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:esm": "tsc --project tsconfig.json",
