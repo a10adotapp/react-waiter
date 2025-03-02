@@ -3,8 +3,7 @@
   "description": "react component to wait multiple promises",
   "version": "0.7.0",
   "scripts": {
-    "build": "tsc",
-    "publish": "npm publish --access=public"
+    "build": "tsc"
   },
   "files": [
     "dist",
