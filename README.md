@@ -56,3 +56,7 @@ npm install @a10adotapp/react-waiter
 | `orders` | promises to resolve |
 | `serve` | called when all promises are resolved |
 | `sideshow` | fallback component shown until all promises resolved |
+
+## Storybook
+
+- https://a10adotapp.github.io/react-waiter/
