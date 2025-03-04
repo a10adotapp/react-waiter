@@ -3,7 +3,7 @@ import { ReactElement, Suspense } from "react";
 /**
  * props accepted by {@link Waiter}.
  */
-type WaiterProps<T> = ChefProps<T> & {
+export type WaiterProps<T> = ChefProps<T> & {
   /**
    * fallback component shown until all orders get ready
    */
@@ -61,14 +61,14 @@ export function Waiter<T>({
 /**
  * error thrown when failed to resolve order
  */
-interface OrderResolveError extends Error {
+export interface OrderResolveError extends Error {
   reason: PromiseRejectedResult["reason"];
 }
 
 /**
  * props accepted by {@link Chef}.
  */
-type ChefProps<T extends {
+export type ChefProps<T extends {
   [K in keyof T]: T[K];
 }> = {
   /**
@@ -92,7 +92,7 @@ type ChefProps<T extends {
 /**
  * accept orders and serve dishes
  */
-async function Chef<T>({
+export async function Chef<T>({
   orders,
   serve,
 }: ChefProps<T>) {
@@ -111,11 +111,17 @@ async function Chef<T>({
           error: null,
         }
       } else {
+        let reason: unknown = resolvedOrder.reason;
+
+        if (resolvedOrder.reason instanceof Error) {
+          reason = resolvedOrder.reason.message;
+        }
+
         result[key] = {
           error: {
-            name: "DataCollectorResolveError",
+            name: "OrderResolveError",
             message: "failed to resolve order",
-            reason: resolvedOrder.reason,
+            reason,
           },
         };
       }

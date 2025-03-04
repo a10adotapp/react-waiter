@@ -1,6 +1,7 @@
 <img src="assets/image.jpg" alt="react-waiter" width="500" height="273">
 
 ![NPM Version](https://img.shields.io/npm/v/%40a10adotapp%2Freact-waiter)
+![NPM Downloads](https://img.shields.io/npm/dy/%40a10adotapp%2Freact-waiter)
 
 # React Waiter
 
