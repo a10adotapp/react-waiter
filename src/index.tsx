@@ -111,17 +111,17 @@ export async function Chef<T>({
           error: null,
         }
       } else {
-        let reason: unknown = resolvedOrder.reason;
+        let message = "failed to resolve order";
 
         if (resolvedOrder.reason instanceof Error) {
-          reason = resolvedOrder.reason.message;
+          message = resolvedOrder.reason.message;
         }
 
         result[key] = {
           error: {
             name: "OrderResolveError",
-            message: "failed to resolve order",
-            reason,
+            message,
+            reason: resolvedOrder.reason,
           },
         };
       }

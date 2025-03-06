@@ -9,3 +9,5 @@ services:
     volumes:
       - .npm:/home/vscode/.npm
       - ..:/home/vscode/react-waiter
+    ports:
+      - 3000:3000
