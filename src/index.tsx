@@ -26,7 +26,7 @@ export type WaiterProps<T> = ChefProps<T> & {
  *       resolve({
  *         name: "John Doe",
  *       });
- *     }, 1000);
+ *     }, 2000);
  *   });
  * }
  * 
