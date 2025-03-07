@@ -3,6 +3,8 @@
 ![NPM Version](https://img.shields.io/npm/v/%40a10adotapp%2Freact-waiter)
 ![NPM Downloads](https://img.shields.io/npm/dy/%40a10adotapp%2Freact-waiter)
 
+[![Lint and Test](https://github.com/a10adotapp/react-waiter/actions/workflows/ci.yml/badge.svg)](https://github.com/a10adotapp/react-waiter/actions/workflows/ci.yml)
+
 <img src="assets/image.jpg" alt="react-waiter" width="500" height="273">
 
 a react component to resolve promises
@@ -61,5 +63,7 @@ npm install @a10adotapp/react-waiter
 
 - npm
     - https://www.npmjs.com/package/@a10adotapp/react-waiter
+- GitHub
+    - https://github.com/a10adotapp/react-waiter
 - Storybook
     - https://a10adotapp.github.io/react-waiter/
