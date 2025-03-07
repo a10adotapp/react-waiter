@@ -1,5 +1,5 @@
 import { getUuid, getUuidCached } from "@/actions/get-uuid";
-import { Waiter } from "../../../../../src";
+import { Waiter } from "@a10adotapp/react-waiter";
 
 export async function ComponentSample(props: {
   label: string;
