@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 import { Waiter } from ".";
 
-test("run as expected", async ({ mount, page }) => {
+test("run as expected", async ({ mount }) => {
   const delay = async (delay: number, error?: string | undefined) => {
     return new Promise<number>((resolve, reject) => {
       setTimeout(() => {
