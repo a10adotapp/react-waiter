@@ -10,4 +10,6 @@ services:
       - .npm:/home/vscode/.npm
       - ..:/home/vscode/react-waiter
     ports:
-      - 3000:3000
+      - 3000:3000 # examples
+      - 6006:6006 # storybook
+      - 9323:9323 # playwright
